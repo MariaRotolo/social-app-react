@@ -14,7 +14,7 @@ const PostPreview = (props) => {
     return (
         <article className={styles.post}>
             <h3>{data.author}</h3>
-            <p><small><InsDate date = {data.date}/> </small></p>
+            <p><small>{data.date? <InsDate date = {data.date}/> : <></>} </small></p>
             <p>{data.text}</p>
 
             {data.photo ? <img src={data.photo} alt={data.author}/> : <></>}

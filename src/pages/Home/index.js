@@ -4,7 +4,7 @@ import {MessagePreview} from "../../components/MessagePreview/index.js";
 import { PostPreview } from '../../components/PostPreview/index.js';
 import { http } from "./../../libs/http.js";
 import styles from "./Home.module.scss";
-import react from "react";
+
 //import style from "../../components/FriendPreview.module.scss";
 
 const friends = [
@@ -42,7 +42,7 @@ const Home = () => {
     
     
 
-    useEffect(() =>{
+    useEffect(() =>{  // passa la funzione e dice quando la deve eseguire.  
         http("/friends?_limit=4") 
 
         .then ((data) => setFriendsPreview(data));

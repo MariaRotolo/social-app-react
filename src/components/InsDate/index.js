@@ -1,7 +1,7 @@
 
 
 import {it} from "date-fns/locale";
-import { formatRelative} from "date-fns";
+import {formatRelative} from "date-fns";
 
 const InsDate = (props) => {
     return ( <p>
