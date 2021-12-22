@@ -7,10 +7,11 @@ import styles from "./Friends.module.scss";
 
 const Friends = () => {
   const [friendsList, setFriendsList] = useState([]);
+  const [pagination, setPagination] = useState(1);
 
   useEffect(() => {
-    http("/friends").then((friendsList) => setFriendsList(friendsList));
-  }, []);
+    http(`/friends?_page=${pagination}`).then((friendsList) => setFriendsList(friendsList));
+  }, [pagination]);
 
   return (
     <div className={styles.Friends}>
